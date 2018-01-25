@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Employee Management Data</title>
+  <title>Rock Paper Scissors</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/employee_style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
 <body>
-
   <!-- ****************** jumbotron ********************** -->
   <div class="container">
     <div style="background-color: black; color: white" class="jumbotron">
@@ -18,55 +17,60 @@
 
   <!-- ******************* container ********************* -->
   <div class="container">
-    <div class="panel panel-default">
+    <div class="panel panel-inverse">
       <div class="panel-heading"
-      <h2 style="color: white;">Start!</h2>
+      <h2 style="color: white;" id="game-prompt">Login</h2>
     </div>
     <div class="panel-body">
-      <table class="table"> <!-- ******************* table ********************* -->
-        <thead>
-          <tr>
-            <th scope="col">User Name:</th>
-            <th scope="col">Most Played:</th>
-            <th scope="col">Joined:</th>
-            <th scope="col">Games Won:</th>
-          </tr>
-        </thead>
-        <tbody id="High Score">
-        </tbody>
-      </table> <!-- ******************* table ********************* -->
+      <div class="container-fluid" id="gaime-main">
+        <div class="row">
+          <div class="col-md-2 col-lg-2" id="game-controls">
+            <ul>
+            <li><button class="btn btn-primary" id="login">login</button></li>
+            <li><button class="btn btn-primary" id="rock">rock</button></li>
+            <li><button class="btn btn-primary" id="paper">paper</button></li>
+            <li><button class="btn btn-primary" id="scissors">scissors</button></li>
+          </ul>
+          </div>
+          <div class="col-md-6 col-lg-6" id="game-board">
+
+          </div>
+
+          <div class="col-md-4 col-lg-4" id="scoreboard"
+            <table class="table"> <!-- ******************* table ********************* -->
+              <thead>
+                <tr>
+                  <th scope="col">User Name:</th>
+                  <th scope="col">Most Played:</th>
+                  <th scope="col">Joined:</th>
+                  <th scope="col">Games Won:</th>
+                </tr>
+              </thead>
+              <tbody id="scores">
+              </tbody>
+            </table> <!-- ******************* table ********************* -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    <form id="main-form"> <!-- ******************* form ********************* -->
-      <div class="form-group">
-        <label for="user-name">User Name:</label>
-        <input type="text" class="form-control" id="user-name" placeholder="Enter User Name" name="user-name">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Employee Role:</label>
-        <input type="text" class="form-control" id="employee-role" placeholder="employee-role" name="employee-role">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Start Date:</label>
-        <input type="text" class="form-control" id="start-date" placeholder="start-date" name="start-date">
-      </div>
-      <div class="form-group">
-        <label for="email">Rate:</label>
-        <input type="number" class="form-control" id="rate" placeholder="rate" name="rate">
-      </div>
-
-
-      <!-- ******************* buttons ********************* -->
-      <button type="submit" class="btn btn-success"> Add</button>
-      <button id ="clear-results" type="submit" class="btn btn-default">Clear Results</button>
+  <form id="main-form"> <!-- ******************* form ********************* -->
+    <div class="form-group">
+      <label for="user-name">User Name:</label>
+      <input type="text" class="form-control" id="user-name" placeholder="Enter User Name" name="user-name">
+    </div>
+    <button type="submit" class="btn btn-success" id="addButton"> Add</button>
+    <button type="submit" class="btn btn-success" id="chatbutton"> send</button>
     </form> <!-- ******************* end of form ********************* -->
-  </div>
+
+    <
+</div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
-  <script src="assets/js/logic.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+<script src="assets/js/game.js"></script>
 </body>
 </html>

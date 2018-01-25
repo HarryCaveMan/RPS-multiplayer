@@ -1,0 +1,13 @@
+ul{
+	list-style-type:none;
+}
+button{
+	margin-top:5px;
+	margin-bototm:5px;
+}
+.panel-heading{
+	background-color:#000;
+}
+ul,#game-main,#game-controls,.container-fluid{
+	padding:0;
+}
